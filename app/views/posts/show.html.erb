@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<p>
+  		<strong>Opis:</strong>
+  			<%= @post.description %>
+		</p>
+
+		<%= link_to 'Edytuj', edit_post_path(@post), class: 'btn btn-primary btn-sm active' %> |
+		<%= link_to 'Wstecz', posts_path, class: 'btn btn-warning btn-sm active' %>
+</div>

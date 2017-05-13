@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h1>Edytuj Post</h1></div>
+	<div class="panel-body">
+
+		<div class="panel_footer"><%= render 'form', post: @post %></div>
+		<br />
+
+		<%= link_to 'Pokaż', @post, class: 'btn btn-info btn-sm active' %> |
+		<%= link_to 'Wstecz', posts_path, class: 'btn btn-warning btn-sm active' %>
