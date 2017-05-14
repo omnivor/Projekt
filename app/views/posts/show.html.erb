@@ -2,7 +2,8 @@
 <div class="panel panel-default">
 	<div class="panel-body">
 		<p>
-  		<strong>Opis:</strong>
+		<%= image_tag @post.image.url(:medium) %><br>
+  			<strong>Opis:</strong>
   			<%= @post.description %>
 		</p>
 
