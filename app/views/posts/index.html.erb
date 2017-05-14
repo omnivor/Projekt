@@ -16,8 +16,10 @@
           <tr>
             <td><%= post.description %></td>
             <td><%= link_to 'Pokaż', post, class: 'btn btn-info btn-sm active' %></td>
-            <td><%= link_to 'Edytuj', edit_post_path(post), class: 'btn btn-primary btn-sm active' %></td>
-            <td><%= link_to 'Usuń', post, class: 'btn btn-danger btn-sm active', method: :delete, data: { confirm: 'Jestes pewny?' } %></td>
+            <% if post.user == current_user %>
+              <td><%= link_to 'Edytuj', edit_post_path(post), class: 'btn btn-primary btn-sm active' %></td>
+              <td><%= link_to 'Usuń', post, class: 'btn btn-danger btn-sm active', method: :delete, data: { confirm: 'Jestes pewny?' } %></td>
+            <% end %>
           </tr>
         <% end %>
       </tbody>
