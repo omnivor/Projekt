@@ -1,12 +1,14 @@
-<p id="notice"><%= notice %></p>
-<div class="panel panel-default">
-	<div class="panel-body">
-		<p>
-		<%= image_tag @post.image.url(:medium) %><br>
-  			<strong>Opis:</strong>
-  			<%= @post.description %>
-		</p>
-
-		<%= link_to 'Edytuj', edit_post_path(@post), class: 'btn btn-primary btn-sm active' %> |
-		<%= link_to 'Wstecz', posts_path, class: 'btn btn-warning btn-sm active' %>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading center"><%= image_tag @post.image.url(:medium) %></div>
+			<div class="panel-body"
+  				<%= @post.description %><br/>
+  				<% if @post.user == current_user %>
+					<%= link_to 'Edytuj', edit_post_path(@post), class: 'btn btn-primary btn-sm active' %>
+				<% end %>
+				<%= link_to 'Wstecz', posts_path, class: 'btn btn-warning btn-sm active' %>
+			</div>
+		</div>
+	</div>
 </div>
