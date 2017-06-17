@@ -2,9 +2,10 @@
   <% @posts.each do |post| %>
     <div class="box">
       <div class="panel panel-default">
-        <%= link_to image_tag(post.image.url(:medium)), post %>
+        <%= link_to image_tag(post.image.url(:medium)), post %><br/>
         <div class="panel-body">
           <%= post.description %><br/>
+          <br/><strong><%= post.user.name if post.user %></strong>strong></br>
         </div>
         <% if post.user == current_user %>
           <div class="panel-footer">
@@ -21,7 +22,7 @@
   <div class="center">
     <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
   </div>
-  
+
   
 
 
