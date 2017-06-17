@@ -3,3 +3,7 @@ $body-bg: #392345;
 $text-color: #ff123f;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.center {
+	text-align: center;
+}

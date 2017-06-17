@@ -1,4 +1,4 @@
-<div id="posts" class="transitions-enabled"><br/>
+<div id="posts" class="transitions-enabled">
   <% @posts.each do |post| %>
     <div class="box">
       <div class="panel panel-default">
@@ -12,10 +12,19 @@
               <%= link_to 'Usuń', post, class: 'btn btn-danger btn-sm active', method: :delete, data: { confirm: 'Jestes pewny?' } %>
           </div>
         <% end %>
+
       </div>
+
     </div>
+
   <% end %>
-</div>
+  <div class="center">
+    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  </div>
+  
+  
+
+
 
 
 
