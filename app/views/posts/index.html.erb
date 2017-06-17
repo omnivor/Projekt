@@ -5,7 +5,7 @@
         <%= link_to image_tag(post.image.url(:medium)), post %><br/>
         <div class="panel-body">
           <%= post.description %><br/>
-          <br/><strong><%= post.user.name if post.user %></strong>strong></br>
+          <br/><strong><%= post.user.name if post.user %></strong></br>
         </div>
         <% if post.user == current_user %>
           <div class="panel-footer">
